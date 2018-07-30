@@ -8,3 +8,4 @@ func main() {
 	x["key"] = 10
 	fmt.Println(x)
 }
+	
