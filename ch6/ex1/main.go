@@ -12,11 +12,11 @@ func average(xs []float64) float64 { // take code from our main function and mov
 	return total / float64(len(xs)) // the return statement causes the function to immediately stop and return the value after it to the function that called this one.
 }
 func main() {
-	scores := []float64{98, 93, 77, 82, 83} // scores = list of scores. This is the calling function.
-	fmt.Println(average(scores))
+	xs := []float64{98, 93, 77, 82, 83} // xs = list of scores. This is the calling function.
+	fmt.Println(average(xs))
 }
 
-/*
+/* s
 func average(xs []float64) float64 {
 	panic("Not Implemented")
 }
