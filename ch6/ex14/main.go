@@ -8,7 +8,7 @@ func sum(input ...int) int { // sum is a function that takes a slice of numbers 
 	for _, i := range input {
 		sum += i
 	}
-	fmt.Println(sum)
+	fmt.Println("sum is", sum)
 	return sum
 }
 
