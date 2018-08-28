@@ -13,6 +13,5 @@ func main() {
 	x := 5
 	zero(&x) // & operator finds the address of a variable. &x returns *int (pointer to an int) because x is an int.
 	// this allows us to modify the original variable. &x in main function and xPtr in zero function refer to the same memory location.
-	fmt.Println(x) // x is 0
-
+	fmt.Println(x) // x is 7
 }
