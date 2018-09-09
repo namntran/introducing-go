@@ -1,0 +1,12 @@
+6. What are defer, panic and recover? 
+- defer schedules a function call to be run after the completion of the function
+- panic immediately stops the execution of the function
+- recover stops the panic and returns the value that was passed to the call to panic
+
+How do you recover from a runtime panic? We can recover from a run-time panic using the recover built-in.
+
+7. How do you get the memory address of a variable? & (dereference)
+
+8. How do you assign a value to a pointer? *
+
+9. How you create a new pointer? (*int) * followed by value type
