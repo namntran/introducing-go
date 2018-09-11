@@ -5,9 +5,10 @@ import (
 	"math"
 )
 
-// a better way to write a program is to use a struct
+// a better way to write a program is to use a struct rather than using only Go's built-in data types.
 // a struct is a type that contains names 'fields'
-// Rectangle and Circle have area methods that return float64
+// Rectangle and Circle have area methods that return float64s, so both types implement the Shape interface
+// we can use interface types as arguments to functions
 
 type Shape interface {
 	// An interface is like struct that defines a 'method set' instead of a 'field'
@@ -16,7 +17,8 @@ type Shape interface {
 	perimeter() float64
 }
 
-type Circle struct {
+type Circle struct { // a struct is a type that contains names 'fields'. Fields are like a set off grouped variables.
+	// each field has a name and a type and is stored adjacent to the other ffields in the struct.
 	x, y, r float64
 }
 
@@ -25,18 +27,19 @@ type Rectangle struct {
 }
 
 func main() {
-	c := Circle{1, 1, 5}
+	c := Circle{1, 1, 5} // create an instance of new Circle type
 	r := Rectangle{1, 1, 10, 10}
 
-	fmt.Println(c.area())
-	fmt.Println(r.area())
+	fmt.Println(c.area()) // . calls the Circle area function
+	fmt.Println(r.area()) // . calls the Rectange area function
 
-	fmt.Println(c.perimeter())
-	fmt.Println(r.perimeter())
+	fmt.Println(c.perimeter()) // . calls the Circle perimeter function
+	fmt.Println(r.perimeter()) // . calls the Rectangle perimeter function
 
 }
 
-func (c *Circle) area() float64 {
+func (c *Circle) area() float64 { //special type of function known as a method. (c *Circle) is a receiver.
+	// Allows us to call the function using the . operator:
 	return math.Pi * c.r * c.r
 }
 
